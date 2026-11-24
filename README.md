@@ -163,3 +163,7 @@ README.md
 Los DTO validan entradas; la entidad mapea la tabla; el servicio ejecuta el CRUD con el repositorio TypeORM; el controlador expone POST, GET, PATCH y DELETE; el módulo registra el recurso. Los archivos fuente son `.ts`, y `dist` es la salida compilada.
 
 La continuación prevista en el Word es implementar los CRUD de Rol, Usuario y UsuarioRol, luego frontend y CI/CD. Esta entrega se limita al CRUD de Persona. Las credenciales provisionales Operador/Cliente del documento no se crean ni se usan: el laboratorio todavía no implementa autenticación.
+
+## Verificación realizada
+
+Compilación TypeScript correcta y prueba HTTP del CRUD aprobada contra PostgreSQL 17 real. Se verificaron POST, GET, PATCH y DELETE, correo inválido (400), identificación duplicada (409), UUID inválido (400) y consulta posterior a eliminación (404). Se utilizó un puerto temporal libre porque 3000 estaba ocupado en el equipo; el backend conserva el puerto 3000 indicado por la guía. La prueba admite `TEST_API_URL` para indicar otra URL de Persona.
